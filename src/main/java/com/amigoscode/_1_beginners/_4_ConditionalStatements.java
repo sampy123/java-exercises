@@ -14,6 +14,11 @@ public class _4_ConditionalStatements {
         // Declare an int variable called number and assign it a positive value.
 
         int number = 7;
+         if(number > 7) {
+             System.out.println("positive\n");
+         } else {
+             System.out.println("not positive");
+         }
 
         // TODO: 2 - Add an else clause to the above that prints "Not positive"
         // Change the value of number to a negative value or 0 to test both branches.
@@ -27,6 +32,15 @@ public class _4_ConditionalStatements {
         // Else print "Grade: F"
 
         int score = 85;
+        if (score >= 90) {
+            System.out.println("Grade: A");
+        } else if(score >=80) {
+            System.out.println("Grade: B");
+        } else if (score >=70) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade F");
+        }
 
 
         // TODO: 4 - Write a switch statement for day of the week
@@ -36,6 +50,17 @@ public class _4_ConditionalStatements {
         // Include a default case for invalid values.
 
         int day = 3;
+        String sDay = switch (day) {
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            case 7 -> "Sunday";
+            default -> "NaN";
+        };
+        System.out.println(sDay);
 
 
         // TODO: 5 - Use a switch statement with a String
@@ -54,7 +79,7 @@ public class _4_ConditionalStatements {
         //       ...
         //   };
         // Print the result.
-
+        System.out.println("Already done that lol");
 
         // TODO: 7 - Write a nested if statement to check if a number is positive AND even
         // Declare an int variable called value.
