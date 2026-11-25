@@ -52,7 +52,11 @@ public class _5_LoopExercises {
         // Declare a variable called factorial and initialize it to 1.
         // Multiply factorial by each number from 1 to 5.
         // Print the result.
-        System.out.println("easy");
+        int factorial = 1;
+        for (int i = 1; i <= 5; i++) {
+            factorial *= i;
+        }
+        System.out.println(factorial);
 
 
         // TODO: 6 - Use an enhanced for loop (for-each) to iterate over a String array
