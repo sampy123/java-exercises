@@ -14,7 +14,7 @@ public class _10_MiniProject {
     public static void main(String[] args) {
 
         // TODO: 1 - Create a Scanner for user input
-
+        Scanner scanner = new Scanner(System.in);
 
         // TODO: 2 - Display a menu with the following options:
         // Print:
@@ -24,15 +24,19 @@ public class _10_MiniProject {
         //   "3. Multiply"
         //   "4. Divide"
         //   "Choose an operation (1-4): "
+        System.out.print("=== Simple Calculator ===\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\nChoose an operation (1-4): ");
 
 
         // TODO: 3 - Read the user's choice into an int variable
-
+        int input = scanner.nextInt();
 
         // TODO: 4 - Prompt and read two double numbers from the user
         // Print "Enter first number: " and read it.
         // Print "Enter second number: " and read it.
-
+        System.out.print("Enter first number: ");
+        int number1 = scanner.nextInt();
+        System.out.print("Enter second number: ");
+        int number2 = scanner.nextInt();
 
         // TODO: 5 - Use a switch statement to perform the chosen operation and print the result
         // Case 1: Print "Result: " + (num1 + num2)
@@ -40,6 +44,16 @@ public class _10_MiniProject {
         // Case 3: Print "Result: " + (num1 * num2)
         // Case 4: Perform division (but handle division by zero first - see TODO 6)
         // Default: Print "Invalid choice"
+//
+        var result = switch (input) {
+            case 1 -> number1 + number2;
+            case 2 -> number1 - number2;
+            case 3 -> number1 * number2;
+            case 4 -> number2 == 0 ? "Error: Cannot divide by zero" : number1 / number2;
+            default -> "Invalid choice";
+        };
+
+        System.out.println("Result: " + result);
 
 
         // TODO: 6 - Inside case 4, handle division by zero with an if statement

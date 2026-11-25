@@ -1,5 +1,7 @@
 package com.amigoscode._1_beginners;
 
+
+
 /**
  * Exercise: Strings
  *
@@ -17,35 +19,59 @@ public class _8_StringExercises {
 
         // TODO: 1 - Get the length of the 'message' string and print it
         // Hint: Use the .length() method
+        System.out.println(message.length());
 
 
         // TODO: 2 - Convert 'message' to uppercase and lowercase, and print both
         // Hint: Use .toUpperCase() and .toLowerCase()
+        String upMessage = message.toUpperCase();
+        String LowMessage = message.toLowerCase();
+        System.out.println(upMessage +"\n"+ LowMessage);
 
 
         // TODO: 3 - Get a substring of 'message' containing the first 5 characters and print it
         // Hint: Use .substring(startIndex, endIndex)
+        String subs = message.substring(0,5);
+        System.out.println(subs);
 
 
         // TODO: 4 - Check if 'message' contains the word "Amigoscode" and print the result
         // Hint: Use .contains()
+        System.out.println(message.contains("Amigoscode"));
 
 
         // TODO: 5 - Replace "Amigoscode" with "Java" in 'message' and print the new string
         // Hint: Use .replace(oldValue, newValue)
 
+        System.out.println(message.replace("Amigoscode","Java"));
+
 
         // TODO: 6 - Trim the whitespace from the 'padded' string and print the result
         // Hint: Use .trim()
-
+        System.out.println(padded.trim());
 
         // TODO: 7 - Split the 'csv' string by commas into a String array and print each element
         // Hint: Use .split(",") then loop through the resulting array
-
+        String[] arr = csv.split(",");
+        for (String elm : arr) {
+            System.out.println(elm);
+        }
 
         // TODO: 8 - Check if two strings are equal using .equals() (not ==)
         // Create two String variables with the same text content and compare them.
         // Print the result of .equals() and explain why == may not work for Strings.
+        String str1 = "bobo";
+        String str2 = "bobo";
+        System.out.println(str1.equals(str2));
+
+        /* == may not works for String because they are object which is different from primitive ? if they have the same address
+        * in memory it may works but if the two string point to different address it will not work.*/
+
+        /*ok that previous answer was before i watch the String videos. but now as long as the String reference to the
+        * value within the string pools == will work but if that's not the case, it won't work.*/
+
+        /*ok basically == works for string literals but not for string objects.*/
+
 
     }
 }

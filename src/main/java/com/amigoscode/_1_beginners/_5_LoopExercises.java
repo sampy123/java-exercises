@@ -58,7 +58,10 @@ public class _5_LoopExercises {
         // TODO: 6 - Use an enhanced for loop (for-each) to iterate over a String array
         // Declare a String array called fruits with at least 4 fruit names.
         // Use an enhanced for loop to print each fruit.
-        System.out.println("easy too\n");
+        String[] fruits = {"Banana", "Mango", "Apple", "Orange"};
+        for ( String fruit : fruits) {
+            System.out.println(fruit);
+        }
 
 
         // TODO: 7 - Write a nested for loop to print a 3x3 multiplication table
